@@ -19,7 +19,7 @@ module OmniAuth
       end
 
       def raw_info
-        @raw_info ||= access_token.get('/vapid/settings/account').parsed
+        @raw_info ||= access_token.get('/vapid/me').parsed
       end
     end
   end

@@ -1,4 +1,4 @@
-# Omniauth::Procore
+# OmniAuth::Procore
 
 This is the official OmniAuth strategy for authenticating to Procore. To
 use it, you'll need to sign up for an OAuth2 Application ID and Secret

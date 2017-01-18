@@ -1,8 +1,8 @@
 # Omniauth::Procore
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/omniauth/procore`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This is the official OmniAuth strategy for authenticating to Procore. To
+use it, you'll need to sign up for an OAuth2 Application ID and Secret
+on the [Procore Applications Page](https://developers.procore.com/developers).
 
 ## Installation
 
@@ -22,7 +22,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+use OmniAuth::Builder do
+  provider :procore, ENV['PROCORE_KEY'], ENV['PROCORE_SECRET']
+end
+```
 
 ## Development
 
@@ -32,5 +36,5 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/omniauth-procore. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/procore/omniauth-procore. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 

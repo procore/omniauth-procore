@@ -1,10 +1,11 @@
 # coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
+lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'omniauth/procore/version'
+require "omniauth/procore/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "omniauth-procore"
+  spec.licenses      = ["MIT"]
   spec.version       = OmniAuth::Procore::VERSION
   spec.authors       = ["Procore Engineering"]
   spec.email         = ["dev@procore.com"]
@@ -20,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency 'omniauth-oauth2', '>= 1.1.1', '< 2.0'
+  spec.add_dependency "omniauth-oauth2", ">= 1.1.1", "< 2.0"
 
   spec.add_development_dependency "bundler", "~> 1.13"
   spec.add_development_dependency "rake", "~> 10.0"

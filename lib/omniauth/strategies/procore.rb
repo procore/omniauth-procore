@@ -16,6 +16,7 @@ module OmniAuth
       info do
         {
           email: raw_info['login'],
+          name: raw_info['name'],
           procore_id: raw_info['id']
         }
       end

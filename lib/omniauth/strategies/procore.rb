@@ -6,7 +6,7 @@ module OmniAuth
       option :name, 'procore'
 
       option :client_options,
-        site: 'https://login.procore.com',
+        site: 'https://app.procore.com',
         authorize_path: '/oauth/authorize'
 
       uid do

@@ -7,6 +7,7 @@ module OmniAuth
 
       option :client_options,
         site: 'https://login.procore.com',
+        api_site: 'https://api.procore.com',
         authorize_path: '/oauth/authorize'
 
       uid do
@@ -22,6 +23,7 @@ module OmniAuth
       end
 
       def raw_info
+        access_token.client.site = options[:client_options][:api_site]
         @raw_info ||= access_token.get('/vapid/me').parsed
       end
 

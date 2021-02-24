@@ -23,8 +23,20 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-use OmniAuth::Builder do
+Rails.application.config.middleware.use OmniAuth::Builder do
   provider :procore, ENV['PROCORE_KEY'], ENV['PROCORE_SECRET']
+end
+```
+
+With a different Procore environment (e.g. sandbox):
+
+```ruby
+Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :procore, ENV['PROCORE_KEY'], ENV['PROCORE_SECRET'],
+  client_options: {
+    site: 'https://sandbox.procore.com',
+    api_site: 'https://sandbox.procore.com',
+  },
 end
 ```
 

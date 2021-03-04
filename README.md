@@ -23,9 +23,27 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-use OmniAuth::Builder do
-  provider :procore, ENV['PROCORE_KEY'], ENV['PROCORE_SECRET']
+Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :procore, ENV['PROCORE_KEY'], ENV['PROCORE_SECRET'], 
+  client_options: {} # Optional
 end
+```
+
+To specify a different Procore environment (e.g. sandbox):
+
+```ruby
+client_options: {
+  site: 'https://sandbox.procore.com',
+  api_site: 'https://sandbox.procore.com',
+}
+```
+
+Procore API version `v1.0` is used by default to request user information. It is not recommended to change this, but it can be set to support the legacy API `vapid` and possible future versions (e.g. `v2.0`).
+
+```ruby
+client_options: {
+  version: `vapid`
+}
 ```
 
 ## Development

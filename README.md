@@ -35,8 +35,8 @@ To specify an alternative Procore environment, such as the developer sandbox:
 
 ```ruby
 client_options: {
-  site: `https://sandbox.procore.com`
-  api_site: `https://sandbox.procore.com`
+  site: 'https://sandbox.procore.com'
+  api_site: 'https://sandbox.procore.com'
 }
 ```
 

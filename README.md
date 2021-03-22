@@ -29,14 +29,21 @@ Rails.application.config.middleware.use OmniAuth::Builder do
 end
 ```
 
-To specify a different Procore environment (e.g. sandbox):
+### Environments
+
+To specify an alternative Procore environment, such as the developer sandbox:
 
 ```ruby
 client_options: {
   site: 'https://sandbox.procore.com',
-  api_site: 'https://sandbox.procore.com',
+  api_site: 'https://sandbox.procore.com'
 }
 ```
+
+* `site` is the base authentication URL, which defaults to `https://login.procore.com`.
+* `api_site` is the base API URL, which defaults to `https://api.procore.com`.
+
+### API Versioning
 
 Procore API version `v1.0` is used by default to request user information. It is not recommended to change this, but it can be set to support the legacy API `vapid` and possible future versions (e.g. `v2.0`).
 
